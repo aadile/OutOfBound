@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
+import 'package:OutOfBounds/zht/location-holder.dart';
 
 class ActualPosition extends StatefulWidget {
   @override
@@ -38,9 +39,6 @@ class ActualPositionState extends State<ActualPosition>{
     }
     
     _locationData = await location.getLocation();
-    setState(() {    
-    }); 
-
   }
 
   getLatandLng(){
@@ -54,11 +52,14 @@ class ActualPositionState extends State<ActualPosition>{
       home: new Scaffold(
         backgroundColor: Colors.red,
         body: Center(
-          child: getLatandLng(),
+          child: new RaisedButton(
+            child: Text('Make as start'),       
+            onPressed: () {
+              startingLocationData = _locationData;
+            },
+          )
         ),
       ),
     );
   }
-
-  
 }
