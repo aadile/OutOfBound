@@ -9,7 +9,7 @@ class LocationProvider with ChangeNotifier {
   LocationData _startingPosition;
 
   /*Send MAJ*/
-  set starting(value) {
+  set starting(LocationData value) {
     _startingPosition = value;
     notifyListeners();
   } 
