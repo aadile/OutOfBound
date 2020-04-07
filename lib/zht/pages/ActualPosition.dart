@@ -89,12 +89,9 @@ void updateDistance(LocationProvider provider) async
                     onPressed: () {
                       _provider.starting = _provider.current;
                    }
-                  ),
-                   
+                  ), 
                   Text("Actually at ${distanceInMeters} meters from the starting point.")
-                 
-                
-                
+                                
                  ]
                 )
               ),   
